@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "username": "root",
+      "password": "root"
+    },
+    {
+      "username": "AzureDiamond",
+      "password": "hunter2"
+    }
+  ]
+}
