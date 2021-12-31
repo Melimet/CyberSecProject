@@ -7,7 +7,7 @@ import userinfo from './userinfo.json'
 const App = () => {
 
   const [user, setUser] = useState(undefined)
-  const users = userinfo.users
+  var users = userinfo.users
 
   console.log(users)
 
