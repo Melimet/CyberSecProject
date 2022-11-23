@@ -12,6 +12,6 @@ export function loginUser(username: string, password: string) {
   if (user.password !== password)
     return `Oopsie woopsie! You must have mistyped your password! Your password is ${user.password} :^)`
 
-  const token = Math.round(Math.random() * 10)
-  return {token, username: user.username, password: user.password}
+  const token = String(Math.round(Math.random() * 10))
+  return {token, username: user.username, password: user.password, paymentInfo: user.paymentInfo }
 }

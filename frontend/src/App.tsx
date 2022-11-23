@@ -1,32 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import axios from "axios"
+import { useEffect, useState } from "react"
+import "./App.css"
+import LoginForm from "./components/LoginForm"
+import Message from "./components/Message"
+import UserInfo from "./components/UserInfo"
+import { UserType } from "./types"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user, setUser] = useState<UserType>()
+  const [message, setMessage] = useState("")
+
+  useEffect(() => {
+    const loggedUser = window.localStorage.getItem("loggedUser")
+
+    if (loggedUser) {
+      setUser(JSON.parse(loggedUser))
+    }
+  }, [])
+
+  async function loginUser(username: string, password: string) {
+    try {
+      const content = { username, password }
+      const url = "http://localhost:3001/api/login"
+
+      const response = await axios.post(url, content)
+
+      if (!response.data.username) {
+        setMessage(response.data?.error)
+        return
+      }
+
+      const data = response.data
+      console.log("DATA", data)
+      setUser(data)
+      window.localStorage.setItem("loggedUser", JSON.stringify(data))
+      setMessage(`Welcome back, ${data.username}!`)
+    } catch (error: unknown) {
+      setMessage(
+        `ERROR: ${error instanceof Error ? error.message : "unknown error"}`
+      )
+    }
+  }
+
+  function logOutUser() {
+    setUser(undefined)
+    window.localStorage.removeItem('loggedUser')
+    setMessage(`Successfully logged out!`)
+  }
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div>
+      <h1>secureApp</h1>
+      <Message message={message} />
+      {!user ? (
+        <LoginForm loginUser={loginUser} />
+      ) : (
+        <UserInfo user={user} logOutUser={logOutUser} />
+      )}
     </div>
   )
 }
