@@ -1,0 +1,29 @@
+[
+  {
+    "username": "raimo1952",
+    "password": "hunter2",
+    "paymentInfo": {
+      "cardNumber": 2133123,
+      "expirationDate": "12/24",
+      "cvc": "123"
+    }
+  },
+  {
+    "username": "user",
+    "password": "password",
+    "paymentInfo": {
+      "cardNumber": 867876123,
+      "expirationDate": "11/26",
+      "cvc": "531"
+    }
+  },
+  {
+    "username": "root",
+    "password": "root",
+    "paymentInfo": {
+      "cardNumber": 126423645,
+      "expirationDate": "05/23",
+      "cvc": "123"
+    }
+  }
+]
