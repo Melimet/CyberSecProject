@@ -25,7 +25,7 @@ If you somehow are missing git, installation instructions can be found [here](ht
 
 1. Go inside the cloned repo with `cd cybersecproject`.
 
-2. Install dependencies via using command `npm install`.
+2. Install dependencies via using command `npm run install`.
 
 3. Start the project by running command `npm run start`. The app opens up in http://localhost:3000/. Backend is hosted on http://localhost:3001/.
 
