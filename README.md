@@ -21,13 +21,22 @@ This project was made using Typescript so you need to have Node.js and a package
 In order to install Node.js and npm, follow instructions found [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
 1. Clone the repo with command `git clone https://github.com/Melimet/cybersecproject.git`
-If you somehow are missing git, installation instructions can be found here https://github.com/git-guides/install-git
+If you somehow are missing git, installation instructions can be found [here](https://github.com/git-guides/install-git)
 
-1. After cloning the repo, go inside the repo using ‘cd cybersecproject’
+1. Go inside the cloned repo with `cd cybersecproject`.
 
-2. When inside the repo, install dependencies via using command `npm install`.
+2. Install dependencies via using command `npm install`.
 
-3. Start the project by running command ‘npm start’. The app opens up in http://localhost:3001/.
+3. Start the project by running command `npm run start`. The app opens up in http://localhost:3000/. Backend is hosted on http://localhost:3001/.
 
-4. You can now play around with the project. Usernames and passwords are stored in `.backend/src/users.json`.
+4. You can now play around with the project. Usernames and passwords are stored in `.backend/src/users.json`. 
+
+
+Usernames and Passwords
+```
+root:root
+user:password
+raimo1952:hunter2
+ville_vastaamo:asd123
+```
 
