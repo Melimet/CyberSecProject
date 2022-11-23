@@ -13,7 +13,7 @@ This project has 5 intentionally created vulnerabilities from OWASP top 10 list.
 
 This is a very bare bones app with login and logout functionalities. The stack is Typescript with React.js as acting as frontend and Node.js as backend. Database is just a users.json file in the backend.  I am using OWASP 2021 list. SecureApp reacts differently to correct username+password combinations, correct username but wrong password combination and wrong username and password combinations.
 
-## INSTALLATION INSTRUCTIONS:
+## Installation guide
 This project was made using Typescript so you need to have Node.js and a package manager such as npm installed.
 
 1. **YOU CAN SKIP THIS STEP IF YOU HAVE NODE AND NPM INSTALLED** 

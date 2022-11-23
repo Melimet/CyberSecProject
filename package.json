@@ -1,0 +1,21 @@
+{
+  "name": "cybersecproject",
+  "version": "1.0.0",
+  "description": "## Implemented Vulnerabilities ### 1. Security Misconfiguration - GET /api/users returns all user data including passwords and other sensitive information ### 2. Insecure Design - Attempting to login with correct username but wrong password reveals the correct password ### 3. Cryptographic Failures - Password are stored as plain text in ./backend/src/users.json  ### 4. Broken Access Control - CORS is misconfigured to allow API access from any address ### 5. Insufficient Logging & Monitoring - No logging or monitoring is present in backend",
+  "main": "index.js",
+  "scripts": {
+    "start-frontend": "cd ./frontend && npm run dev",
+    "start-backend": "cd ./backend && npm run dev",
+    "start": "npm run start-frontend & npm run start-backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melimet/cybersecproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Melimet/cybersecproject/issues"
+  },
+  "homepage": "https://github.com/Melimet/cybersecproject#readme"
+}
