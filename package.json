@@ -9,7 +9,7 @@
     "start": "npm-run-all -p start-frontend start-backend",
     "install-frontend": "cd ./frontend && npm install",
     "install-backend": "cd ./backend && npm install",
-    "install-dependencies": "npm-run-all -p install-frontend install-backend"
+    "install": "npm-run-all -p install-frontend install-backend"
   },
   "repository": {
     "type": "git",
