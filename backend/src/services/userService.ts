@@ -10,6 +10,7 @@ export function loginUser(username: string, password: string) {
   if (!user) return undefined
 
   if (user.password !== password)
+  // FIX: return 'Username and/or password is incorrect'
     return `Oopsie woopsie! You must have mistyped your password! Your password is ${user.password} :^)`
 
   const token = String(Math.round(Math.random() * 10))
