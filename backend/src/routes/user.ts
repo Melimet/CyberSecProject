@@ -1,12 +1,12 @@
-import express from "express";
-import { getUsers } from "../services/userService";
+import express from "express"
+import { getUsers } from "../services/userService"
 
 const userRouter = express.Router()
 
-//TODO: TEST USE ONLY, DONT PUT IN PRODUCTION!!!!!!
-userRouter.get('/', (_request, response) => {
-  const users = getUsers()
-  return response.json(users)
-})
-
+//if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test") {
+  userRouter.get("/", (_request, response) => {
+    const users = getUsers()
+    return response.json(users)
+  })
+//}
 export { userRouter }
