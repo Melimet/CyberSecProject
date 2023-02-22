@@ -27,9 +27,7 @@ If you somehow are missing git, installation instructions can be found [here](ht
 
 4. Install project dependencies with `npm install`
 
-5. Install frontend & backend dependencies via using command `npm run install`.
-
-6. Start the project by running command `npm run start`. The app opens up in http://localhost:3000/. Backend is hosted on http://localhost:3001/.
+5. Start the project by running command `npm run start`. The app opens up in http://localhost:3000/. Backend is hosted on http://localhost:3001/.
 You can now play around with the project. Usernames and passwords are stored in `.backend/src/users.json`. 
 
 
